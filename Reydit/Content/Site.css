@@ -1,0 +1,74 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+div#container {
+    margin: 0px 10px 10px 0px;
+}
+
+div#header {
+    text-shadow: 0px 0px 4px blue;
+    min-height: 96px;
+    background-color: #F0F0FF;
+    padding: 12px;
+}
+
+div#main {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    background-color: #F0F0FF;
+    padding: 8px;
+    border: 1px solid #8080A0;
+}
+
+div#sidebar-left {
+    display: table-cell;
+    width: 150px;
+    border-right: 1px dotted #8080A0;
+    padding: 5px;
+}
+
+div#sidebar-right {
+    display: table-cell;
+    width: 150px;
+    border-left: 1px dotted #8080A0;
+    padding: 5px;
+}
+
+div#content {
+    margin: 5px;
+    padding: 8px 14px;
+    border: 1px solid #8080A0;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+div.sidebar-block {
+    margin: 6px 4px;
+    padding: 0px 4px;
+    border: 1px solid #8080A0;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+div.sidebar-block > p:first-child {
+    text-align: center;
+    margin: 4px;
+    font-weight: 600;
+    font-size: large;
+    background-color: #F0F0FF;
+}
+
+div.sidebar-block a {
+    display: block;
+}

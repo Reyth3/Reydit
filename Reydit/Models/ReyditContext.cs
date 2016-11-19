@@ -19,5 +19,6 @@ namespace Reydit.Models
         public DbSet<Post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Subreydit> Subreydits { get; set; }
+        public DbSet<Session> Sessions { get; set; }
     }
 }
