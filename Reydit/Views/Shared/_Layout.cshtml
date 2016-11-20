@@ -17,7 +17,27 @@
             <div id="sidebar-left">
                 <div class="sidebar-block">
                     <p>User Panel</p>
-                    <p>Stuff.</p>
+                    @if(Reydit.Models.User.IsLoggedIn)
+                    {
+                        if (Reydit.Models.User.CurrentUser != null)
+                        {
+                            <p>@Reydit.Models.User.CurrentUser.Username</p>
+                        }
+                        @Html.ActionLink("Log Out", "LogOut", "User")
+                    }
+                    else
+                    {
+                        using (Html.BeginForm("LogIn", "User", FormMethod.Post))
+                        {
+                            <p>Username:</p>
+                            <input type="text" name="username" />
+                            <p>Password:</p>
+                            <input type="password" name="password" />
+                            <input type="submit" />
+                            <hr />
+                            @Html.ActionLink("Register Now", "Register", "User")
+                        }
+                    }
                 </div>
             </div>
             <div id="content">

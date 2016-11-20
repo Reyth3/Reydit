@@ -7,6 +7,7 @@ namespace Reydit.Models
 {
     public class Comment
     {
+        public Comment() { }
         public Comment(string message, User author, Post post)
         {
             Message = message;

@@ -7,6 +7,7 @@ namespace Reydit.Models
 {
     public class Post
     {
+        public Post() { }
         public Post(string name, bool link, string content, User author)
         {
             Name = name;
