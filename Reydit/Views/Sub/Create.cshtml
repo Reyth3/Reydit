@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create New Subreydit</h2>
+@using (Html.BeginForm("Process", "Sub", FormMethod.Post))
+{
+    <input type="hidden" name="mode" value="create" />
+    <h3>Short Name</h3>
+    <span>/r/</span><input type="text" name="shortName" />
+    <h3>Name</h3>
+    <input type="text" name="name" />
+    <h3>Description</h3>
+    <input type="text" name="desc" />
+    <input type="submit" />
+}

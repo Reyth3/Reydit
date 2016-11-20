@@ -20,6 +20,10 @@ namespace Reydit.Models
         public string Message { get; set; }
         public DateTime PostingDate { get; set; }
 
+        public int Upvotes { get; set; }
+        public int Downvotes { get; set; }
+        public int Score { get { return 1 + Upvotes - Downvotes; } }
+
         public virtual User Author { get; set; }
         public virtual Post Post { get; set; }
     }

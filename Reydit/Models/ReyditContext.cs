@@ -9,6 +9,14 @@ namespace Reydit.Models
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class ReyditContext : DbContext
     {
+        private ReyditContext current;
+
+        public ReyditContext Current
+        {
+            get { if (current == null) current = new ReyditContext(); return current; }
+        }
+
+
         public ReyditContext()
         {
             Database.CreateIfNotExists();

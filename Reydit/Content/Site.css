@@ -4,12 +4,6 @@
     padding-right: 15px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
 
 div#container {
     margin: 0px 10px 10px 0px;
@@ -33,14 +27,14 @@ div#main {
 
 div#sidebar-left {
     display: table-cell;
-    width: 150px;
+    width: 220px;
     border-right: 1px dotted #8080A0;
     padding: 5px;
 }
 
 div#sidebar-right {
     display: table-cell;
-    width: 150px;
+    width: 220px;
     border-left: 1px dotted #8080A0;
     padding: 5px;
 }

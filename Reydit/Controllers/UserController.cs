@@ -26,14 +26,18 @@ namespace Reydit.Controllers
             var username = Request["username"];
             var email = Request["email"];
             var password = Request["password"];
+            var confirm = Request["password2"];
 
             var rc = new ReyditContext();
             var success = false;
             try
             {
-                rc.Users.Add(new Models.User(username, password, email));
-                rc.SaveChanges();
-                success = true;
+                if (password == confirm)
+                {
+                    rc.Users.Add(new Models.User(username, password, email));
+                    rc.SaveChanges();
+                    success = true;
+                }
             }
             catch { success = false; }
             return View(success);
@@ -53,6 +57,13 @@ namespace Reydit.Controllers
         {
             Models.User.LogOut();
             return RedirectToAction("Index", "Home");
+        }
+
+        [Route("u/{id}")]
+        public ActionResult Profile(string id)
+        {
+            var user = new ReyditContext().Users.Where(o => o.Username.ToLower() == id.ToLower()).FirstOrDefault();
+            return View(user); 
         }
     }
 }

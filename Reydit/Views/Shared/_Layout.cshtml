@@ -21,7 +21,18 @@
                     {
                         if (Reydit.Models.User.CurrentUser != null)
                         {
-                            <p>@Reydit.Models.User.CurrentUser.Username</p>
+                            var user = Reydit.Models.User.CurrentUser;
+                            <p>@user.Username</p>
+                            <table align="center">
+                                <tr>
+                                    <td align="center"><h2>@user.Posts.Sum(o => o.Score)</h2></td>
+                                    <td align="center"><h2>@user.Comments.Sum(o => o.Score)</h2></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">Posts Score</td>
+                                    <td align="center">Comments Score</td>
+                                </tr>
+                            </table>
                         }
                         @Html.ActionLink("Log Out", "LogOut", "User")
                     }
@@ -44,7 +55,10 @@
                 @RenderBody();
             </div>
             <div id="sidebar-right">
-
+                <div class="sidebar-block">
+                    <p>Subreddits</p>
+                    @Html.ActionLink("New Subreddit", "Create", "Sub")
+                </div>
             </div>
         </div>
     </div>
