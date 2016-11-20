@@ -30,7 +30,7 @@ namespace Reydit.Controllers
             var desc = Request["desc"];
             var mode = Request["mode"];
 
-            var rc = new ReyditContext();
+            var rc = ReyditContext.Current;
             if(mode == "create")
             {
                 var user = Models.User.CurrentUser;

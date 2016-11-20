@@ -28,7 +28,7 @@ namespace Reydit.Controllers
             var password = Request["password"];
             var confirm = Request["password2"];
 
-            var rc = new ReyditContext();
+            var rc = ReyditContext.Current;
             var success = false;
             try
             {

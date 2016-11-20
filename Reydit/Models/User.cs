@@ -36,7 +36,7 @@ namespace Reydit.Models
 
         public static bool LogIn(string username, string password)
         {
-            var rc = new ReyditContext();
+            var rc = ReyditContext.Current;
             var pwHash = string.Join("", (new SHA1Managed()).ComputeHash(Encoding.UTF8.GetBytes(password)).Select(o => string.Format("{0:X2}", o)));
             try
             {
@@ -75,7 +75,7 @@ namespace Reydit.Models
 
         public static User CurrentUser { get
             {
-                var rc = new ReyditContext();
+                var rc = ReyditContext.Current;
                 var c = HttpContext.Current.Request.Cookies.Get("user_token");
                 if (c != null)
                 {
