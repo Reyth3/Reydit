@@ -1,0 +1,17 @@
+﻿@model Reydit.Models.Subreydit
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<h2>@Model.Name</h2>
+@{
+    var limit = 0;
+    foreach (var post in Model.Posts)
+    {
+        if (limit == 25)
+            break;
+        @Html.Partial("PostBlock", post);
+
+        limit++;
+    }
+}

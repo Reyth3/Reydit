@@ -1,0 +1,10 @@
+﻿@model Reydit.Models.Post
+
+<div class="post-block">
+    @Html.ActionLink(Model.Name, "Show", "Post")
+    <p>
+        Posted by @Html.ActionLink(Model.Author.Username, "Profile", "User") | 
+        on @Model.PostingDate
+    </p>
+    @Html.ActionLink(Model.Comments.Count() + "Comments", "Show", "Post")
+</div>

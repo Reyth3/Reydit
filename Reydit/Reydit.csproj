@@ -148,6 +148,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\User\Profile.cshtml" />
     <Content Include="Views\Sub\Create.cshtml" />
+    <Content Include="Views\Sub\Show.cshtml" />
+    <Content Include="Views\Shared\PostBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
