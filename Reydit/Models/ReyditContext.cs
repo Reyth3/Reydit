@@ -13,7 +13,7 @@ namespace Reydit.Models
 
         public static ReyditContext Current
         {
-            get { if (current == null) current = new ReyditContext(); return current; }
+            get { if (current == null) current = new ReyditContext(); else { current.Dispose(); current = new ReyditContext(); } return current; }
         }
 
 

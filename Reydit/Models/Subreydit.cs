@@ -8,6 +8,7 @@ namespace Reydit.Models
 {
     public class Subreydit
     {
+        public Subreydit() { }
         public Subreydit(string name, string desc, User owner)
         {
             Name = name;

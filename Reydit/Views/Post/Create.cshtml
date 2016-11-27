@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Post</h2>
+@if(Reydit.Models.User.CurrentUser != null)
+{
+    using (Html.BeginForm("Process", "Post", FormMethod.Post))
+    {
+        <input type="hidden" name="mode" value="create" />
+        <input type="hidden" name="type" value="@Model" />
+        <h3>Title</h3>
+        <input type="text" name="title" />
+        if(ViewBag.type == "text")
+        {
+            <h3>Content</h3>
+            <textarea name="content"></textarea>
+        }
+        else
+        {
+            <h3>URL</h3>
+            <input type="text" name="url" />
+        }
+        <h3>Subreydit</h3>
+        <span>/r/</span><input type="text" name="sub" />
+        <p><input type="submit" /></p>
+    }
+}
+else {
+    <p>You need to be logged in to create posts.</p>
+}

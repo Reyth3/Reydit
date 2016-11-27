@@ -9,7 +9,9 @@
     foreach (var post in Model.Posts)
     {
         if (limit == 25)
+        {
             break;
+        }
         @Html.Partial("PostBlock", post);
 
         limit++;

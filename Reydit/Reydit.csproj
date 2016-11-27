@@ -123,6 +123,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\SubController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -150,6 +151,7 @@
     <Content Include="Views\Sub\Create.cshtml" />
     <Content Include="Views\Sub\Show.cshtml" />
     <Content Include="Views\Shared\PostBlock.cshtml" />
+    <Content Include="Views\Post\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

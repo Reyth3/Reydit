@@ -8,7 +8,7 @@ namespace Reydit.Models
     public class Post
     {
         public Post() { }
-        public Post(string name, bool link, string content, User author)
+        public Post(string name, bool link, string content, User author, Subreydit sub)
         {
             Name = name;
             Link = link;
@@ -27,6 +27,7 @@ namespace Reydit.Models
         public int Downvotes { get; set; }
         public int Score { get { return 1 + Upvotes - Downvotes; } }
 
+        public virtual Subreydit Owner { get; set; }
         public virtual User Author { get; set; }
         public virtual List<Comment> Comments { get; set; }
     }
