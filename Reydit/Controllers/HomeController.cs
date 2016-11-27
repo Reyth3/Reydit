@@ -12,8 +12,8 @@ namespace Reydit.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            new ReyditContext();
-            return View();
+            var rc = new ReyditContext();
+            return View(rc.Posts.ToList());
         }
     }
 }
